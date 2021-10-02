@@ -12,7 +12,7 @@ class Comentar(models.Model):
     modificado = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        verbose_name = "comantar"
+        verbose_name = "comentar"
         verbose_name_plural = "comentarios"
 
     def __str__(self):

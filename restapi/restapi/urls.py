@@ -39,10 +39,10 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('users.api.router')),
-    path('api/', include(router_categorias.urls)),
-    path('api/', include(router_tareas.urls)),
-    path('api/', include(router_comentar.urls)),
+    path('api/users/', include('users.api.router')),
+    path('api/categorias/', include(router_categorias.urls)),
+    path('api/tareas/', include(router_tareas.urls)),
+    path('api/comentarios/', include(router_comentar.urls)),
     path(r'documentacion-ui/', schema_view.with_ui('swagger',
         cache_timeout=0), name='schema-swagger-ui'),
     path(r'documentacion-doc/', schema_view.with_ui('redoc',

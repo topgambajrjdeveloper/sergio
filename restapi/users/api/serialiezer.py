@@ -2,7 +2,6 @@ from rest_framework.serializers import ModelSerializer
 from users.models import User
 
 
-
 class UserRegisterSerializer(ModelSerializer):
     class Meta:
         model = User
@@ -17,6 +16,7 @@ class UserRegisterSerializer(ModelSerializer):
         instance.save()
         return instance
 
+
 class UserProfileSerializer(ModelSerializer):
     class Meta:
         model = User
@@ -26,7 +26,6 @@ class UserProfileSerializer(ModelSerializer):
             'first_name',
             'last_name',
             'password',
-            'image',
             'facebook',
             'twitter',
             'instagram',
@@ -38,14 +37,14 @@ class UserProfileTareasComentariosSerializer(ModelSerializer):
     class Meta:
         model = User
         fields = [
-            'username',            
+            'username',
         ]
+
 
 class UserUpdateProfileSerializer(ModelSerializer):
     class Meta:
         model = User
         fields = [
-            'image',
             'facebook',
             'twitter',
             'instagram',
